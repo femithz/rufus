@@ -1,8 +1,15 @@
 from django.db import models
 
-class enter(models.Model):
-		title= models.CharField(max_length=255)
-		pub_date = models.DateTimeField()
-		body = models.TextField()
-		image = models.ImageField(upload_to='images/')
-  
+# Create your models here.
+class Job(models.Model):
+
+	project = models.CharField(max_length=200, default='DEFAULT VALUE')
+	image = models.ImageField(upload_to='images/')
+	summary = models.CharField(max_length=200)
+
+class Front(models.Model):
+
+	words = models.CharField(max_length=200, default='DEFAULT VALUE')
+	image = models.ImageField(upload_to='images/')
+	
+
